@@ -140,7 +140,7 @@ const server = http.createServer(app);
 setup(app, server);
 server.listen(port, () => console.log(`Listening on http://localhost:${port}`));
 
-process.env.NODE_ENV = 'production'
+// process.env.NODE_ENV = 'production'
 if (process.env.NODE_ENV === 'production') {
 
   httpsWorker = function(glx) {
