@@ -2,6 +2,7 @@
 const port = Number(process.env.PORT || 3000) + Number(process.env.NODE_APP_INSTANCE || 0);
 
 const http       = require('http');
+const cors       = require('cors');
 const express    = require('express');
 const superagent = require('superagent');
 
@@ -15,6 +16,7 @@ const Room       = colyseus.Room
 const colors     = require('colors/safe');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const debug = false;
